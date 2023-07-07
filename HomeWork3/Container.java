@@ -49,6 +49,14 @@ public class Container implements Iterable<Box>, Comparable<Container>{
         return Integer.compare(this.getWeight(),o.getWeight());
     }
 
+    @Override
+    public String toString() {
+        for (Box item : container) {
+            System.out.println(item);
+        }
+        return String.format("Container %s: boxes is %d weight is %d\n", this.getNameContainer(),
+                                        this.getNumberBox(), this.getWeight());
+    }
     public Integer getWeight(){
         int Sum = 0;
         for (Box box: container) {
@@ -58,14 +66,6 @@ public class Container implements Iterable<Box>, Comparable<Container>{
     }
     public Integer getNumberBox() {
         return container.size();
-    }
-    @Override
-    public String toString() {
-        for (Box item : container) {
-            System.out.println(item);
-        }
-        return String.format("Container %s: boxes is %d weight is %d\n", this.getNameContainer(),
-                                        this.getNumberBox(), this.getWeight());
     }
 
     public String getNameContainer() {

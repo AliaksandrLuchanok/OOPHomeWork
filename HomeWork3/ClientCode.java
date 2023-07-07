@@ -49,11 +49,11 @@ public class ClientCode {
         for (Container container: containers) {
             System.out.println(container);
         }
-        System.out.println("СРАВНИВАНИЕ КОНТЕЙНЕРОВ ЧЕРЕЗ ContainerCountComparator (по числу коробок):");
+        System.out.println("СРАВНЕНИЕ КОНТЕЙНЕРОВ ЧЕРЕЗ ContainerCountComparator (по числу коробок):");
         containers.sort(new ContainerCountComparator()); // через экземпляр класса ContainerCountComparator сравнивание по числу Box
         for (Container container: containers) {
             System.out.println(container); }
-        System.out.println("СРАВНИВАНИЕ КОНТЕЙНЕРОВ ЧЕРЕЗ Comparable класса Container (по общему весу контейнеров):");
+        System.out.println("СРАВНЕНИЕ КОНТЕЙНЕРОВ ЧЕРЕЗ Comparable класса Container (по общему весу контейнеров):");
         Collections.sort(containers); // через экземпляр класса контейнер сравнивание по весу
 //        containers.sort((o1, o2) -> Integer.compare(o1.getWeight(),o2.getWeight())); //сокращенная форма сортировки контейнеров по весу
 //        containers.sort((o1, o2) -> Integer.compare(o1.getNumberBox(),o2.getNumberBox())); //сокращенная форма сортировки контейнеров по количеству ящиков

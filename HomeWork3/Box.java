@@ -30,6 +30,13 @@ public class Box implements Iterator {
             return String.format("Weight this box is: %s ", weight);
         }
     }
+    @Override
+    public String toString() {
+        return "Box{" +
+                "idBox=" + idBox +
+                ", weight=" + weight +
+                '}';
+    }
 
     public Integer getId() {
         return idBox;
@@ -42,11 +49,4 @@ public class Box implements Iterator {
         return weight;
     }
 
-    @Override
-    public String toString() {
-        return "Box{" +
-                "idBox=" + idBox +
-                ", weight=" + weight +
-                '}';
-    }
 }
